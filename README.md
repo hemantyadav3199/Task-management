@@ -1,28 +1,8 @@
-<<<<<<< HEAD
-# Task-management
-=======
-# README
+Ruby version: 3.2.0
+Rails version: 8.0.1
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
->>>>>>> master
+rails new user_task_management --api
+rails g model User name email password_digest phone status:integer
+rails g model Task title description:text status:integer due_date:datetime user:references
+rails generate serializer User
+rails generate serializer Task
